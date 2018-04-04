@@ -1,14 +1,22 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"strings"
+)
 
-func reserseString(s string) (result string) {
+func reverseString(s string) (result string) {
 	for _, v := range s {
 		result = string(v) + result
 	}
 	return
 }
 
+func checkPalindrome(s string) (result int) {
+	result = strings.Compare(s, reverseString(s))
+	return
+}
+
 func main() {
-	fmt.Println(reserseString("hello world"))
+	fmt.Println(reverseString("hello world"))
 }
