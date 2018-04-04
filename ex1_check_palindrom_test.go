@@ -33,6 +33,7 @@ func TestPalindrome(t *testing.T) {
 		{val: "hello world", want: false},
 		{val: "1234", want: false},
 		{val: "malayalam", want: true},
+		{val: "Malayalam", want: true},
 	}
 
 	for _, i := range cases {

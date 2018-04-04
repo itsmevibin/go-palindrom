@@ -13,7 +13,8 @@ func reverseString(s string) (result string) {
 }
 
 func checkPalindrome(s string) (result bool) {
-	result = strings.Compare(s, reverseString(s)) == 0
+	s1 := strings.ToLower(s)
+	result = strings.Compare(s1, reverseString(s1)) == 0
 	return
 }
 
