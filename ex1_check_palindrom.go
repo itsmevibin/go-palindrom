@@ -23,8 +23,8 @@ func main() {
 	fmt.Println("Enter string:")
 	fmt.Scanf("%s\n", &inputVal)
 	if checkPalindrome(inputVal) {
-		fmt.Println("Entered value is not palindrome")
+		fmt.Println("YES... Entered string is a palindrome")
 	} else {
-		fmt.Println("Its a palindrome")
+		fmt.Println("No..! Entered string is not a palindrome")
 	}
 }
