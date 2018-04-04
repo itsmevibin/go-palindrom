@@ -33,16 +33,16 @@ func TestPalindrome(t *testing.T) {
 		{val: "hello world", want: false},
 		{val: "1234", want: false},
 		{val: "malayalam", want: true},
-		{val: "Malayalam", want: true},
+		{val: "Malayalamx", want: true},
 	}
 
 	for _, i := range cases {
 		if checkPalindrome(i.val) != i.want {
-			resultString := "Not a Palimdrome"
+			resultString := "not a Palindrome"
 			if i.want {
-				resultString = "Palimdrome"
+				resultString = "a Palindrome"
 			}
-			t.Errorf("Test %s, Expecting its a %s :But Its not", i.val, resultString)
+			t.Errorf("Test %s, Expecting its %s :But Its failed", i.val, resultString)
 		}
 	}
 }
