@@ -12,8 +12,8 @@ func reverseString(s string) (result string) {
 	return
 }
 
-func checkPalindrome(s string) (result int) {
-	result = strings.Compare(s, reverseString(s))
+func checkPalindrome(s string) (result bool) {
+	result = strings.Compare(s, reverseString(s)) == 0
 	return
 }
 
@@ -21,7 +21,7 @@ func main() {
 	var inputVal string
 	fmt.Println("Enter string:")
 	fmt.Scanf("%s\n", &inputVal)
-	if strings.Compare(inputVal, reverseString(inputVal)) != 0 {
+	if checkPalindrome(inputVal) {
 		fmt.Println("Entered value is not palindrome")
 	} else {
 		fmt.Println("Its a palindrome")
